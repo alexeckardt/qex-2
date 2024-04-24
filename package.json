@@ -1,6 +1,6 @@
 {
-  "name": "quiz-generator-lang",
-  "displayName": "Quiz Generator Lang",
+  "name": "qex2-highlights",
+  "displayName": "QEX2 Highlighter",
   "description": "DSL to create latex quizes easily",
   "version": "0.0.1",
   "engines": {
@@ -11,8 +11,8 @@
   ],
   "contributes": {
     "languages": [{
-      "id": "quizgeneratorlatex",
-      "aliases": ["Quiz Generator Lang", "quizgeneratorlatex"],
+      "id": "qexHighlights",
+      "aliases": ["QEX2", "qexHighlights"],
       "extensions": [".qex2"],
       "configuration": "./language-configuration.json",
       "icon": {
@@ -21,9 +21,9 @@
       }
     }],
     "grammars": [{
-      "language": "quizgeneratorlatex",
+      "language": "qexHighlights",
       "scopeName": "source.qex2",
-      "path": "./syntaxes/quizgeneratorlatex.tmLanguage.json"
+      "path": "./syntaxes/qexHighlights.tmLanguage.json"
     }]
   }
 }
