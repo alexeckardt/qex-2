@@ -1,0 +1,89 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Quiz Generator Lang",
+	"scopeName": "source.qex2",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#brackets"
+		},
+		{
+			"include": "#operators"
+		}
+
+	],
+	"repository": {
+		"comments": {
+            "name": "comment.block.qex2",
+            "match": "//.*$"
+        },
+		"brackets": {
+            "patterns": [
+				{
+					"name": "meta.preprocessor.qex2",
+					"begin": "\\$",
+					"end": "\\$"
+				},
+				{
+					"name": "support.type.qex2",
+					"begin": "\\|\\|",
+					"end": "\\|\\|"
+				}
+			]
+        },
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.control.qex2",
+					"begin": "/\\?",
+					"end": "(?=/[\\?\\!\\=\\@\\-\\/\\#\\>\\<\\&\\$])"
+				},
+				{
+					"name": "string.qex2",
+					"begin": "/!",
+					"end": "(?=/[\\?\\!\\=\\@\\-\\/\\#\\>\\<\\&\\$])"
+				},
+				{
+					"name": "entity.name.function.qex2",
+					"begin": "/\\-",
+					"end": "(?=/[\\?\\!\\=\\@\\-\\/\\#\\>\\<\\&\\$])"
+				},
+				{
+					"name": "keyword.operator.qex2",
+					"begin": "/\\@",
+					"end": "(?=/[\\?\\!\\=\\@\\-\\/\\#\\>\\<\\&\\$])"
+				},
+				{
+					"name": "meta.preprocessor.qex2",
+					"begin": "/\\$",
+					"end": "(?=/[\\?\\!\\=\\@\\-\\/\\#\\>\\<\\&\\$])"
+				},
+				{
+					"name": "constant.other.caps.qex2",
+					"begin": "/\\&",
+					"end": "(?=/[\\?\\!\\=\\@\\-\\/\\#\\>\\<\\&\\$])"
+				},
+				{
+					"name": "support.constant.handlebars.qex2",
+					"begin": "/\\>",
+					"end": "(?=/[\\?\\!\\=\\@\\-\\/\\#\\>\\<\\&\\$])"
+				},
+				{
+					"name": "support.constant.handlebars.qex2",
+					"begin": "/\\<",
+					"end": "(?=/[\\?\\!\\=\\@\\-\\/\\#\\>\\<\\&\\$])"
+				},
+				{
+					"name": "support.variable",
+					"match": "/\\#"
+				},
+				{
+					"name": "support.variable",
+					"match": "/\\="
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "quiz-generator-lang",
+  "displayName": "Quiz Generator Lang",
+  "description": "DSL to create latex quizes easily",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "quizgeneratorlatex",
+      "aliases": ["Quiz Generator Lang", "quizgeneratorlatex"],
+      "extensions": [".qex2"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./icons/icon1.png",
+        "dark": "./icons/icon2.png"
+      }
+    }],
+    "grammars": [{
+      "language": "quizgeneratorlatex",
+      "scopeName": "source.qex2",
+      "path": "./syntaxes/quizgeneratorlatex.tmLanguage.json"
+    }]
+  }
+}
